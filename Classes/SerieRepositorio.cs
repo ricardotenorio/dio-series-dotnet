@@ -10,32 +10,32 @@ namespace Series.Classes
 
         public Serie AcharPorId(int id)
         {
-            throw new System.NotImplementedException();
+            return _series[id];
         }
 
-        public void Atualizar(int id, Serie entidade)
+        public void Atualizar(int id, Serie serie)
         {
-            throw new System.NotImplementedException();
+            _series[id] = serie;
         }
 
         public void Excluir(int id)
         {
-            throw new System.NotImplementedException();
+            _series[id].Excluir();
         }
 
-        public void Inserir(Serie entidade)
+        public void Inserir(Serie serie)
         {
-            throw new System.NotImplementedException();
+            _series.Add(serie);
         }
 
         public List<Serie> Listar()
         {
-            throw new System.NotImplementedException();
+            return new List<Serie>(_series);
         }
 
         public int ProximoId()
         {
-            throw new System.NotImplementedException();
+            return _series.Count;
         }
     }
 }
