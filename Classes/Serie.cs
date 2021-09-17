@@ -24,8 +24,12 @@ namespace Series.Classes
 
         public override string ToString()
         {
-            string serie = $"Genero: {Genero}\nTítulo: {Titulo}\nDescrição: {Descricao}\nAno: {Ano}";
-
+            string serie = "";
+            serie += $"Genero: {this.Genero}\n";
+            serie += $"Título: {this.Titulo}\n";
+            serie += $"Descrição: {this.Descricao}\n";
+            serie += $"Ano: {this.Ano}\n";
+            serie += $"Excluído: {this.Excluido}";
 
             return serie;
         }
@@ -38,6 +42,11 @@ namespace Series.Classes
         public int RetornarId()
         {
             return this.Id;
+        }
+
+        public bool RetornarExcluido()
+        {
+            return this.Excluido;
         }
 
         public void Excluir() {
